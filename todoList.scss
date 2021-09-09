@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image:linear-gradient( 150deg, rgba(180, 163, 6, 0.5),rgba(255,0,0,0.5));
+    font-family: Verdana, Tahoma, sans-serif;
+    min-height: 100vh;
+    color: white;
+}
+header, form{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header{
+font-size: 2rem;
+
+}
+label{
+    font-size: 2rem;
+    padding: 5px;
+}
+form input{
+    border: none;
+    border-bottom: 1px solid white;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    background: white;
+   color: rgba(255,0,0,0.5);
+}
+form input :focus{
+    outline: none;
+}
+form ::placeholder{
+    opacity: 0.3;
+}
+ul li {
+    list-style-type: none;
+    display: flex;
+}
+form .addBtn{
+    width: 2rem;
+    height: 2.8rem;
+    font-size: 2rem;
+    color: royalblue;
+    cursor: pointer;
+
+  
+   }
+  
+  
+   .todoContainer{
+       display: flex;
+       width: 60%;
+       background: white;
+       justify-content: space-between;
+       align-items: center;
+       color: rgba(255,0,0,0.5);
+       margin: 5px;
+ }
+ ul div li{
+     flex: 1;
+    padding: 5px; 
+   
+ }
+ .doneBtn, .trash_Btn{
+   cursor: pointer;
+   padding: .5rem;
+   color: white;
+   margin: 2px 4px;
+   width: 2rem;
+   height:2.5rem;
+   background: red;
+ }
+ .doneBtn{
+     background: limegreen;
+
+ }
+ .donBtn{
+      text-decoration: line-through;
+    opacity: 0.5;
+ }
+ 
+ .doneBtn p, .trash_Btn p{
+    pointer-events: none; 
+    color: white;
+     
+ }
+ 
+ .doneBtn:hover, .trash_Btn:hover{
+    transform: scale(0.9);   
+ }
+ 

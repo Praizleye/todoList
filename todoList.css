@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(150deg, rgba(180, 163, 6, 0.5), rgba(255, 0, 0, 0.5));
+  font-family: Verdana, Tahoma, sans-serif;
+  min-height: 100vh;
+  color: white;
+}
+
+header, form {
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header {
+  font-size: 2rem;
+}
+
+label {
+  font-size: 2rem;
+  padding: 5px;
+}
+
+form input {
+  border: none;
+  border-bottom: 1px solid white;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  background: white;
+  color: rgba(255, 0, 0, 0.5);
+}
+
+form input :focus {
+  outline: none;
+}
+
+form ::-webkit-input-placeholder {
+  opacity: 0.3;
+}
+
+form :-ms-input-placeholder {
+  opacity: 0.3;
+}
+
+form ::-ms-input-placeholder {
+  opacity: 0.3;
+}
+
+form ::placeholder {
+  opacity: 0.3;
+}
+
+ul li {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form .addBtn {
+  width: 2rem;
+  height: 2.8rem;
+  font-size: 2rem;
+  color: royalblue;
+  cursor: pointer;
+}
+
+.todoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  background: white;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(255, 0, 0, 0.5);
+  margin: 5px;
+}
+
+ul div li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 5px;
+}
+
+.doneBtn, .trash_Btn {
+  cursor: pointer;
+  padding: .5rem;
+  color: white;
+  margin: 2px 4px;
+  width: 2rem;
+  height: 2.5rem;
+  background: red;
+}
+
+.doneBtn {
+  background: limegreen;
+}
+
+.donBtn {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.doneBtn p, .trash_Btn p {
+  pointer-events: none;
+  color: white;
+}
+
+.doneBtn:hover, .trash_Btn:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+/*# sourceMappingURL=todoList.css.map */
