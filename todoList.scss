@@ -30,10 +30,9 @@ form input{
     padding: 0.5rem;
     background: white;
    color: rgba(255,0,0,0.5);
+   outline: none;
 }
-form input :focus{
-    outline: none;
-}
+
 form ::placeholder{
     opacity: 0.3;
 }
@@ -41,31 +40,71 @@ ul li {
     list-style-type: none;
     display: flex;
 }
-form .addBtn{
-    width: 2rem;
-    height: 2.8rem;
-    font-size: 2rem;
-    color: royalblue;
-    cursor: pointer;
 
+form .addBtn{
+    width: 2.5rem;
+    height: 45px;
+    font-size: 2rem;
+    color: #ff6f47;
+    background-color: white;
+    cursor: pointer;
+ 
   
    }
   
+   select{
+      appearance: none;
+      outline: none;
+      border: none;
+    }
+    .select{
+        margin: 1rem;
+        position: relative;
+        overflow: hidden;
+       
+    }
+  select{
+      color: #ff6f47;
+      height: 2.8rem;
+      width: 9rem;
+      cursor: pointer;
+      padding: 1rem;
+      
+  }
   
-   .todoContainer{
+  .select::after{
+      content: "\25BC";
+      position: absolute;
+      background-color:  #ff6f47;
+      top: 0;
+      right: 0;
+      height: 2.8rem;
+      padding: .8rem;
+      pointer-events: none;
+     
+     
+  }
+ .select:hover::after{
+        background-color: white;
+        color: #ff6f47;
+            }
+   div.todoContainer{ 
        display: flex;
        width: 60%;
        background: white;
        justify-content: space-between;
        align-items: center;
        color: rgba(255,0,0,0.5);
-       margin: 5px;
+       margin: 5px auto;
+       transition: all 1s ease;
  }
+
  ul div li{
      flex: 1;
     padding: 5px; 
    
  }
+
  .doneBtn, .trash_Btn{
    cursor: pointer;
    padding: .5rem;
@@ -73,24 +112,38 @@ form .addBtn{
    margin: 2px 4px;
    width: 2rem;
    height:2.5rem;
-   background: red;
+   background: rgb(245, 57, 57);
+   border-radius: 5px;
+   
+
+   &:hover{
+    transform: scale(0.9);   
+   }
+  
  }
  .doneBtn{
-     background: limegreen;
+     background: rgb(44, 201, 44);
 
  }
  .donBtn{
       text-decoration: line-through;
     opacity: 0.5;
+
  }
  
- .doneBtn p, .trash_Btn p{
+ .doneBtn svg, .trash_Btn svg{
     pointer-events: none; 
     color: white;
-     
+   
  }
  
- .doneBtn:hover, .trash_Btn:hover{
-    transform: scale(0.9);   
+ svg.ticked{
+     width: 22px;
+  margin-left: -2px;
  }
- 
+
+ .fall{
+     transform: translateY(8rem) rotateZ(30deg);
+     opacity: 0;
+    
+ }

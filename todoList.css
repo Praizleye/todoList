@@ -41,9 +41,6 @@ form input {
   padding: 0.5rem;
   background: white;
   color: rgba(255, 0, 0, 0.5);
-}
-
-form input :focus {
   outline: none;
 }
 
@@ -71,14 +68,53 @@ ul li {
 }
 
 form .addBtn {
-  width: 2rem;
-  height: 2.8rem;
+  width: 2.5rem;
+  height: 45px;
   font-size: 2rem;
-  color: royalblue;
+  color: #ff6f47;
+  background-color: white;
   cursor: pointer;
 }
 
-.todoContainer {
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: #ff6f47;
+  height: 2.8rem;
+  width: 9rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background-color: #ff6f47;
+  top: 0;
+  right: 0;
+  height: 2.8rem;
+  padding: .8rem;
+  pointer-events: none;
+}
+
+.select:hover::after {
+  background-color: white;
+  color: #ff6f47;
+}
+
+div.todoContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,7 +127,9 @@ form .addBtn {
       -ms-flex-align: center;
           align-items: center;
   color: rgba(255, 0, 0, 0.5);
-  margin: 5px;
+  margin: 5px auto;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 ul div li {
@@ -108,11 +146,17 @@ ul div li {
   margin: 2px 4px;
   width: 2rem;
   height: 2.5rem;
-  background: red;
+  background: #f53939;
+  border-radius: 5px;
+}
+
+.doneBtn:hover, .trash_Btn:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .doneBtn {
-  background: limegreen;
+  background: #2cc92c;
 }
 
 .donBtn {
@@ -120,13 +164,19 @@ ul div li {
   opacity: 0.5;
 }
 
-.doneBtn p, .trash_Btn p {
+.doneBtn svg, .trash_Btn svg {
   pointer-events: none;
   color: white;
 }
 
-.doneBtn:hover, .trash_Btn:hover {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+svg.ticked {
+  width: 22px;
+  margin-left: -2px;
+}
+
+.fall {
+  -webkit-transform: translateY(8rem) rotateZ(30deg);
+          transform: translateY(8rem) rotateZ(30deg);
+  opacity: 0;
 }
 /*# sourceMappingURL=todoList.css.map */

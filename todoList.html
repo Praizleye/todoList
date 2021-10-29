@@ -13,11 +13,19 @@
         <label for='memo'>Memo Item</label>
         <input type="text" name="memo" class="todoItem" placeholder="add item here" autocomplete="off"/>
         <button class="addBtn">+</button>
+        <div class="select">
+        <select name="filter" id="optionsFilter">
+            <option value="All">All</option>
+            <option value="Completed">Completed</option>
+            <option value="UnComplete">Uncomplete</option>
+             </select>
+        </div>
+       
     </form>
    
-        <ul>
-            
-        </ul>
+        <ul class="todoWrapper"></ul>       
+        
+     
 
     <script src="./todoList.js"></script>
 </body>
